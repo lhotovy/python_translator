@@ -1,7 +1,49 @@
-h1 {
-  color: blue
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+
+$font-head: "Bruno Ace SC", "sans-serif";
+$font-content: "Mulish", "sans-serif";
+$color-orange: #fca311;
+$color-light: #e5e5e5;
+
+body {
+  background-color: #14213d;
 }
- 
+
+h1, h2 {
+  font-family: $font-head;
+  text-align: center;
+}
+
+h1 {
+  margin-top: 70px;
+  color: $color-orange;
+}
+
 h2 {
-  color: aqua;
+  color: $color-light;
+}
+
+.label {
+  color: $color-light;
+}
+
+.select, .textfields {
+  display: block;
+  padding: 10px;
+}
+
+.content {
+  text-align: center;
+  padding-top: 30px;
+}
+
+#inputText, #outputText {
+  width: 400px;
+  height: 200px;
+  border-radius: 10px;
+  background-color: $color-light;
+  font-family: $font-content;
+  font-size: 25px;
+  padding: 20px;
 }
