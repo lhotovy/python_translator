@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Python Translator</title>
+  <link rel="stylesheet" type="text/scss" href="{{ url_for('static', filename='styles/styles.scss') }}">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="" />
+  <link rel="icon" href="favicon.png">
+</head>
+<body>
+  <h1>Python <span>translator</span></h1>
+  <h2>with Deepl translator</h2>
+  <div>
+    <label for="target_lang">Select target language</label>
+    <select name="target_lang" id="target_lang">
+      <option value="DE">German</option>
+      <option value="EN">English</option>
+      <option value="ES">Spanish</option>
+      <option value="FI">Finnish</option>
+      <option value="IT">Italian</option>
+      <option value="JA">Japanese</option>
+      <option value="NB">Norwegian Bokmal</option>
+      <option value="PL">Polish</option>
+      <option value="RU">Russian</option>
+      <option value="ZH">Chinese</option>
+    </select>
+    <input type="text" placeholder="Type text">
+    <input type="text" placeholder="Translation">
+  </div>
+
+</body>
+</html>
