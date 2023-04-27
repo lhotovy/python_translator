@@ -5,9 +5,11 @@ $font-head: "Bruno Ace SC", "sans-serif";
 $font-content: "Mulish", "sans-serif";
 $color-orange: #fca311;
 $color-light: #e5e5e5;
+$color-focus: #f5f3f4;
+$color-bg: #14213d;
 
 body {
-  background-color: #14213d;
+  background-color: $color-bg;
 }
 
 h1, h2 {
@@ -18,14 +20,18 @@ h1, h2 {
 h1 {
   margin-top: 70px;
   color: $color-orange;
+  font-size: 40px;
 }
 
 h2 {
   color: $color-light;
+  font-size: 30px;
 }
 
 .label {
   color: $color-light;
+  font-family: $font-content;
+  letter-spacing: .5px;
 }
 
 .select, .textfields {
@@ -35,7 +41,6 @@ h2 {
 
 .content {
   text-align: center;
-  padding-top: 30px;
 }
 
 #inputText, #outputText {
@@ -46,4 +51,36 @@ h2 {
   font-family: $font-content;
   font-size: 25px;
   padding: 20px;
+  margin: 0 5px;
+  &:focus {
+    background-color: $color-focus;
+  }
+}
+
+#target_lang {
+  background-color: $color-light;
+  font-family: $font-content;
+  letter-spacing: .5px;
+  text-align: center;
+  border-radius: 4px;
+  font-size: 15px;
+}
+
+#button {
+  height: 50px;
+  width: 130px;
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+  text-align: center;
+  background-color: $color-orange;
+  font-family: $font-content;
+  color: $color-bg;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  border-radius: 6px;
+}
+
+.textfields {
+  border: none;
 }

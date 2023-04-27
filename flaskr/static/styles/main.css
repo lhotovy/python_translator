@@ -12,14 +12,18 @@ h1, h2 {
 h1 {
   margin-top: 70px;
   color: #fca311;
+  font-size: 40px;
 }
 
 h2 {
   color: #e5e5e5;
+  font-size: 30px;
 }
 
 .label {
   color: #e5e5e5;
+  font-family: "Mulish", "sans-serif";
+  letter-spacing: 0.5px;
 }
 
 .select, .textfields {
@@ -29,7 +33,6 @@ h2 {
 
 .content {
   text-align: center;
-  padding-top: 30px;
 }
 
 #inputText, #outputText {
@@ -40,4 +43,36 @@ h2 {
   font-family: "Mulish", "sans-serif";
   font-size: 25px;
   padding: 20px;
+  margin: 0 5px;
+}
+#inputText:focus, #outputText:focus {
+  background-color: #f5f3f4;
+}
+
+#target_lang {
+  background-color: #e5e5e5;
+  font-family: "Mulish", "sans-serif";
+  letter-spacing: 0.5px;
+  text-align: center;
+  border-radius: 4px;
+  font-size: 15px;
+}
+
+#button {
+  height: 50px;
+  width: 130px;
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+  text-align: center;
+  background-color: #fca311;
+  font-family: "Mulish", "sans-serif";
+  color: #14213d;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  border-radius: 6px;
+}
+
+.textfields {
+  border: none;
 }/*# sourceMappingURL=main.css.map */

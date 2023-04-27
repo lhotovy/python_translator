@@ -5,14 +5,12 @@
   <title>Python Translator</title>
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/main.css') }}">
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
-  <script defer src="https://pyscript.net/latest/pyscript.js"></script>
   <meta name="description" content="" />
   <link rel="icon" href="favicon.png">
 </head>
 <body>
   <div class="heading">
-      <h1 class="name">Python translator</h1>
+      <h1>Python <span>translator</span></h1>
       <h2>with Deepl</h2>
   </div>
   <div class="content">
@@ -31,33 +29,20 @@
         <option value="ZH">Chinese</option>
       </select>
     </div>
-    <form id="form" method="POST" action="">
-    {{ form.hidden_tag() }}
-      <fieldset class="textfields">
-        <div class="textfields"> 
-          {% if form.userInput.errors %}
-              {{ form.userInput(class="is-invalid") }}
-                  <div class="invalid-feedback">
-                      {% for error in form.username.errors %}
-                            <span>{{ error }}</span>
-                      {% endfor %}
-                  </div>
-          {% else %}
-              {{ form.userInput(id="inputText", placeholder="Type your text") }} 
-          {% endif %}
-        {{ form.output(id="outputText", placeholder="Translation") }} 
-        {{ form.submit(id="button", type="submit", method="POST") }} 
-        </div>     
-      </fieldset>
-    </form>
+    <div class="textfields">  
+      <input type="text" id="inputText" name="inputText" placeholder="Type your text">
+      <input type="text" id="outputText" placeholder="Translation">
+    </div>
+    <div>
+      <button id="button" type="submit" onclick="translate()">Submit</button>
+    </div>
+    		<div id="message">
+			<div id="result">
+            <<p>{{result}}</p>
+			</div>
+		</div>
   </div>
-
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="{{ url_for('static',filename='js/script.js') }}"></script>
-  <py-script>
-    def translate():
-      target = Element("name")
-      target.element.innerText = "dshbfjdfvjfdfbk"
-  </py-script>
 </body>
 </html>
