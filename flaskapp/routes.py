@@ -1,15 +1,10 @@
-from flask import Flask, render_template, url_for, jsonify, request
+from flaskapp.form import TranslateForm
+from flask import render_template
 import deepl
-from form import TranslateForm
+from flaskapp import app
 
-############# Global variables ##############
-
-app = Flask(__name__)
-app.secret_key = "gd6df5g4fhfg64h6fggh46gh"
 DEEPL_API_KEY = "e4219fbb-19e6-f0d9-f6d5-1dab58ad3b2f:fx"
 DEEPL_ENDPOINT = " https://api-free.deepl.com"
-
-############# Routes #############
 
 @app.route('/', methods=["GET", "POST"])
 def home():
@@ -26,7 +21,3 @@ def home():
         print(result.detected_source_lang)
    
     return render_template("page.html", form=form)
-
-
-if __name__ == "__main__":
-   app.run(debug=True, port=3001)
