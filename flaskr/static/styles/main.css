@@ -29,6 +29,21 @@ h2 {
 .select, .textfields {
   display: block;
   padding: 10px;
+  margin: auto;
+}
+
+#select {
+  border-radius: 6px;
+  font-family: "Mulish", "sans-serif";
+  letter-spacing: 1px;
+}
+
+.select-label {
+  color: #e5e5e5;
+  margin-bottom: 5px;
+  font-family: "Mulish", "sans-serif";
+  line-height: 30px;
+  letter-spacing: 1px;
 }
 
 .content {
@@ -70,9 +85,13 @@ h2 {
   color: #14213d;
   font-weight: bold;
   letter-spacing: 1.5px;
-  border-radius: 6px;
+  border-radius: 8px;
 }
 
 .textfields {
   border: none;
+}
+
+.heading {
+  margin-bottom: 35px;
 }/*# sourceMappingURL=main.css.map */

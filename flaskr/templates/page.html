@@ -5,8 +5,6 @@
   <title>Python Translator</title>
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/main.css') }}">
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
-  <script defer src="https://pyscript.net/latest/pyscript.js"></script>
   <meta name="description" content="" />
   <link rel="icon" href="favicon.png">
 </head>
@@ -16,24 +14,13 @@
       <h2>with Deepl</h2>
   </div>
   <div class="content">
-    <div class="select">
-      <label for="target_lang" class="label">Select target language</label>
-      <select name="target_lang" id="target_lang">
-        <option value="DE">German</option>
-        <option value="EN">English</option>
-        <option value="ES">Spanish</option>
-        <option value="FI">Finnish</option>
-        <option value="IT">Italian</option>
-        <option value="JA">Japanese</option>
-        <option value="NB">Norwegian Bokmal</option>
-        <option value="PL">Polish</option>
-        <option value="RU">Russian</option>
-        <option value="ZH">Chinese</option>
-      </select>
-    </div>
     <form id="form" method="POST" action="">
     {{ form.hidden_tag() }}
       <fieldset class="textfields">
+        <div class="select">
+            {{ form.target_lang.label(class="select-label") }}
+            {{ form.target_lang(id="select", class="select", placeholder="") }} 
+        </div>
         <div class="textfields"> 
           {% if form.userInput.errors %}
               {{ form.userInput(class="is-invalid") }}
@@ -51,13 +38,5 @@
       </fieldset>
     </form>
   </div>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script src="{{ url_for('static',filename='js/script.js') }}"></script>
-  <py-script>
-    def translate():
-      target = Element("name")
-      target.element.innerText = "dshbfjdfvjfdfbk"
-  </py-script>
 </body>
 </html>

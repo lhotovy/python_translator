@@ -37,6 +37,21 @@ h2 {
 .select, .textfields {
   display: block;
   padding: 10px;
+  margin: auto;
+}
+
+#select {
+  border-radius: 6px;
+  font-family: $font-content;
+  letter-spacing: 1px;
+}
+
+.select-label {
+  color: $color-light;
+  margin-bottom: 5px;
+  font-family: $font-content;
+  line-height: 30px;
+  letter-spacing: 1px;
 }
 
 .content {
@@ -78,9 +93,13 @@ h2 {
   color: $color-bg;
   font-weight: bold;
   letter-spacing: 1.5px;
-  border-radius: 6px;
+  border-radius: 8px;
 }
 
 .textfields {
   border: none;
+}
+
+.heading {
+  margin-bottom: 35px;
 }

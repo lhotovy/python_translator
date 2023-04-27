@@ -14,21 +14,18 @@ DEEPL_ENDPOINT = " https://api-free.deepl.com"
 @app.route('/', methods=["GET", "POST"])
 def home():
     form = TranslateForm()
-    return render_template("page.html", form=form)
-
-@app.route('/translated', methods=["POST", "GET"])
-def translate():
-    
     translator = deepl.Translator(DEEPL_API_KEY)
 
-    user_text = request.args.get("inputText", 0, type=str)
-    target_lang = request.args.get("target_lang", 0, type=str)
+    if form.validate_on_submit():            
+        user_text = str(form.userInput.data)
+        target_lang = str(form.target_lang.data)
 
-    result = translator.translate_text(user_text, target_lang=target_lang)
-    print(result)
-    print(result.detected_source_lang)
+        result = translator.translate_text(user_text, target_lang=target_lang)
+        form.output.data = result
+        print(result)
+        print(result.detected_source_lang)
    
-    return jsonify(result = result)
+    return render_template("page.html", form=form)
 
 
 if __name__ == "__main__":
