@@ -1,3 +1,3 @@
-This is translator written in Python on Flask using Deepl translator free API. For styling I use Sass.
+I wrote this Translator in Python on Flask using Deepl translator free API. For styling I use Sass.
 
-Live version of the application is here: http://lhotovy.pythonanywhere.com/
+Live version of the application can be seen here: http://lhotovy.pythonanywhere.com/
