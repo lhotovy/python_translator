@@ -20,22 +20,27 @@ h2 {
   font-size: 30px;
 }
 
-.label {
-  color: #e5e5e5;
-  font-family: "Mulish", "sans-serif";
-  letter-spacing: 0.5px;
-}
-
-.select, .textfields {
-  display: block;
+.select1, .select2, .textFields {
+  display: inline-block;
   padding: 10px;
   margin: auto;
 }
 
-#select {
+#select1, #select2 {
   border-radius: 6px;
   font-family: "Mulish", "sans-serif";
   letter-spacing: 1px;
+  padding: 5px;
+  height: 30px;
+  font-size: 16px;
+}
+
+.select1 {
+  margin-right: 110px;
+}
+
+.select2 {
+  margin-left: 110px;
 }
 
 .select-label {
@@ -44,6 +49,7 @@ h2 {
   font-family: "Mulish", "sans-serif";
   line-height: 30px;
   letter-spacing: 1px;
+  display: block;
 }
 
 .content {
@@ -51,13 +57,13 @@ h2 {
 }
 
 #inputText, #outputText {
-  width: 400px;
+  width: 380px;
   height: 200px;
   border-radius: 10px;
   background-color: #e5e5e5;
   font-family: "Mulish", "sans-serif";
   font-size: 25px;
-  padding: 20px;
+  padding: 30px;
   margin: 0 5px;
 }
 #inputText:focus, #outputText:focus {
@@ -76,9 +82,10 @@ h2 {
 #button {
   height: 50px;
   width: 130px;
+  font-size: 16px;
   display: block;
   margin: auto;
-  margin-top: 10px;
+  margin-top: 12px;
   text-align: center;
   background-color: #fca311;
   font-family: "Mulish", "sans-serif";
@@ -88,10 +95,33 @@ h2 {
   border-radius: 8px;
 }
 
-.textfields {
+.heading {
+  margin-bottom: 35px;
+}
+
+#fieldset {
   border: none;
 }
 
-.heading {
-  margin-bottom: 35px;
+@media (max-width: 600px) {
+  .select1, .select2, .textFields {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 0 auto;
+  }
+  #inputText, #outputText {
+    width: 230px;
+    height: 90px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    text-align: center;
+  }
+  .select-box {
+    width: 200px;
+    margin: 0 auto;
+  }
+  h1 {
+    margin-top: 55px;
+  }
 }/*# sourceMappingURL=main.css.map */

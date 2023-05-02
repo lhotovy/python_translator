@@ -16,12 +16,18 @@
   <div class="content">
     <form id="form" method="POST" action="">
     {{ form.hidden_tag() }}
-      <fieldset class="textfields">
-        <div class="select">
-            {{ form.target_lang.label(class="select-label") }}
-            {{ form.target_lang(id="select", class="select", placeholder="") }} 
-        </div>
-        <div class="textfields"> 
+      <fieldset id="fieldset">
+        <div class="selectFields">
+          <div class="select1">
+              {{ form.source_lang.label(class="select-label") }}
+              {{ form.source_lang(id="select1", class="select-box", placeholder="") }} 
+          </div>        
+          <div class="select2">
+              {{ form.target_lang.label(class="select-label") }}
+              {{ form.target_lang(id="select2", class="select-box", placeholder="") }} 
+          </div>
+        </div>  
+        <div class="textFields">         
           {% if form.userInput.errors %}
               {{ form.userInput(class="is-invalid") }}
                   <div class="invalid-feedback">
