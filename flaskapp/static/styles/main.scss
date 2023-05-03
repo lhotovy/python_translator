@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 
 $font-head: "Bruno Ace SC", "sans-serif";
 $font-content: "Mulish", "sans-serif";
@@ -8,6 +9,7 @@ $color-light: #e5e5e5;
 $color-focus: #f5f3f4;
 $color-bg: #14213d;
 $mobile-breakpoint: 600px;
+$signature-font: "Indie Flower", "cursive";
 
 body {
   background-color: $color-bg;
@@ -63,6 +65,7 @@ h2 {
 
 .content {
   text-align: center;
+  min-height: screen;
 }
 
 #inputText, #outputText {
@@ -112,6 +115,15 @@ h2 {
   border: none;
 }
 
+#signature {
+  font-family: $signature-font;
+  font-size: 24px;
+  color: $color-light;
+  left: 880px;
+  display: block;
+  padding-top: 140px;
+}
+
 @media (max-width: $mobile-breakpoint) {
     h1 {
     margin-top: 55px;
@@ -135,5 +147,9 @@ h2 {
   .select-box {
     width: 200px;
     margin: 0 auto;
+  }
+
+  #signature {
+       padding-top: 50px;
   }
 }

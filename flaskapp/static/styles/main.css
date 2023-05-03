@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Mulish&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
 body {
   background-color: #14213d;
 }
@@ -54,6 +55,7 @@ h2 {
 
 .content {
   text-align: center;
+  min-height: screen;
 }
 
 #inputText, #outputText {
@@ -103,6 +105,15 @@ h2 {
   border: none;
 }
 
+#signature {
+  font-family: "Indie Flower", "cursive";
+  font-size: 24px;
+  color: #e5e5e5;
+  left: 880px;
+  display: block;
+  padding-top: 140px;
+}
+
 @media (max-width: 600px) {
   h1 {
     margin-top: 55px;
@@ -123,5 +134,8 @@ h2 {
   .select-box {
     width: 200px;
     margin: 0 auto;
+  }
+  #signature {
+    padding-top: 50px;
   }
 }/*# sourceMappingURL=main.css.map */
