@@ -71,6 +71,12 @@ h2 {
 #inputText:focus, #outputText:focus {
   background-color: #f5f3f4;
 }
+#inputText:focus::-moz-placeholder, #outputText:focus::-moz-placeholder {
+  color: transparent;
+}
+#inputText:focus::placeholder, #outputText:focus::placeholder {
+  color: transparent;
+}
 
 #target_lang {
   background-color: #e5e5e5;
