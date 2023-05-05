@@ -94,7 +94,6 @@ h2 {
   display: block;
   margin: auto;
   margin-top: 12px;
-  text-align: center;
   background-color: #fca311;
   font-family: "Mulish", "sans-serif";
   color: #14213d;
@@ -109,15 +108,17 @@ h2 {
 
 #fieldset {
   border: none;
+  margin-bottom: 30px;
 }
 
 #signature {
   font-family: "Indie Flower", "cursive";
   font-size: 24px;
   color: #e5e5e5;
-  left: 880px;
-  display: block;
-  padding-top: 140px;
+  bottom: 2%;
+  display: flex;
+  margin-top: 100px;
+  justify-content: center;
 }
 
 @media (max-width: 600px) {
@@ -142,6 +143,7 @@ h2 {
     margin: 0 auto;
   }
   #signature {
-    padding-top: 50px;
+    margin-left: 60px;
+    margin-top: 30px;
   }
 }/*# sourceMappingURL=main.css.map */

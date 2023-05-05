@@ -101,7 +101,6 @@ h2 {
   display: block;
   margin: auto;
   margin-top: 12px;
-  text-align: center;
   background-color: $color-orange;
   font-family: $font-content;
   color: $color-bg;
@@ -116,15 +115,17 @@ h2 {
 
 #fieldset {
   border: none;
+  margin-bottom: 30px;
 }
 
 #signature {
   font-family: $signature-font;
   font-size: 24px;
   color: $color-light;
-  left: 880px;
-  display: block;
-  padding-top: 140px;
+  bottom: 2%;
+  display: flex;
+  margin-top: 100px;
+  justify-content: center;
 }
 
 @media (max-width: $mobile-breakpoint) {
@@ -153,6 +154,7 @@ h2 {
   }
 
   #signature {
-       padding-top: 50px;
+    margin-left: 60px;
+    margin-top: 30px;
   }
 }
