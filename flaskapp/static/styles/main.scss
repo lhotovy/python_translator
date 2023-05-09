@@ -8,11 +8,14 @@ $color-orange: #fca311;
 $color-light: #e5e5e5;
 $color-focus: #f5f3f4;
 $color-bg: #14213d;
-$mobile-breakpoint: 600px;
+$small-breakpoint: 930px;
 $signature-font: "Indie Flower", "cursive";
 
 body {
   background-color: $color-bg;
+  margin: 0 auto;
+  min-height: 100%;
+  width: fit-content;
 }
 
 h1, h2 {
@@ -31,18 +34,11 @@ h2 {
   font-size: 30px;
 }
 
-.select1, .select2, .textFields {
-  display: inline-block;
-  padding: 10px;
-  margin: auto;
-}
-
-.select1 {
-  margin-right: 110px;
-}
-
-.select2 {
-  margin-left: 110px;
+.selectFields {
+  display: flex;
+  justify-content: space-around;
+  margin: auto 100px;
+  padding-bottom: 15px;
 }
 
 #select1, #select2 {
@@ -66,6 +62,11 @@ h2 {
 .content {
   text-align: center;
   min-height: screen;
+}
+
+.textFields {
+  display: flex;
+  justify-content: center;
 }
 
 #inputText, #outputText {
@@ -94,12 +95,16 @@ h2 {
   font-size: 15px;
 }
 
+.button {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
 #button {
-  height: 50px;
-  width: 130px;
-  font-size: 16px;
-  display: block;
-  margin: auto;
+  height: 60px;
+  width: 140px;
+  font-size: 18px;
   margin-top: 12px;
   background-color: $color-orange;
   font-family: $font-content;
@@ -111,6 +116,9 @@ h2 {
 
 .heading {
   margin-bottom: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #fieldset {
@@ -118,43 +126,53 @@ h2 {
   margin-bottom: 30px;
 }
 
-#signature {
+.signature {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
   font-family: $signature-font;
   font-size: 24px;
   color: $color-light;
-  bottom: 2%;
-  display: flex;
-  margin-top: 100px;
-  justify-content: center;
+  margin: auto;  
+  p {
+    margin: 70px auto;
+  }
 }
 
-@media (max-width: $mobile-breakpoint) {
-    h1 {
+@media (max-width: $small-breakpoint) {
+  .body {
+    width: fit-content;
+    margin: auto;
+  }
+  
+  h1 {
     margin-top: 55px;
   }
   
   .select1, .select2, .textFields {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     padding: 10px;
     margin: 0 auto;
   }
 
+  .selectFields {
+    display: flex;
+    flex-direction: column;
+  }
+
   #inputText, #outputText {
-    width: 285px;
+    width: 80%;
     height: 90px;
-    margin-bottom: 10px;
     font-size: 20px;
     text-align: center;
+    margin: 15px auto;
   }
 
   .select-box {
     width: 200px;
     margin: 0 auto;
-  }
-
-  #signature {
-    margin-left: 60px;
-    margin-top: 30px;
   }
 }

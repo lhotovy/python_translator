@@ -39,11 +39,13 @@
               {{ form.userInput(id="inputText", placeholder="Type your text") }} 
           {% endif %}
         {{ form.output(id="outputText", placeholder="Translation") }} 
-        {{ form.submit(id="button", type="submit", method="POST") }} 
-        </div>     
+        </div
+        <div class="button">
+            {{ form.submit(id="button", type="submit", method="POST") }} 
+        </div>          
       </fieldset>
     </form>
-    <div id="signature">
+    <div class="signature">
       <p>by Lukáš Hotový</p>
     </div>
   </div>
