@@ -109,6 +109,7 @@ h2 {
 }
 
 .heading {
+  margin: auto;
   margin-bottom: 35px;
   display: flex;
   flex-direction: column;
@@ -164,5 +165,17 @@ h2 {
   .select-box {
     width: 200px;
     margin: 0 auto;
+  }
+  .content {
+    width: 85%;
+  }
+  .heading {
+    width: 75%;
+  }
+  .signature {
+    width: 50%;
+  }
+  form {
+    width: 90%;
   }
 }/*# sourceMappingURL=main.css.map */
