@@ -3,7 +3,7 @@ from flask import render_template
 import deepl
 from flaskapp import app
 
-DEEPL_API_KEY = "e4219fbb-19e6-f0d9-f6d5-1dab58ad3b2f:fx"
+DEEPL_API_KEY = "API key goes here"
 DEEPL_ENDPOINT = " https://api-free.deepl.com"
 
 @app.route('/', methods=["GET", "POST"])
