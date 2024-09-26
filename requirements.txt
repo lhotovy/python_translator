@@ -5,7 +5,7 @@ colorama==0.4.6
 deepl==1.14.0
 Flask==2.2.3
 Flask-WTF==1.1.1
-idna==3.4
+idna==3.7
 itsdangerous==2.1.2
 Jinja2==3.1.4
 MarkupSafe==2.1.2
